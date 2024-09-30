@@ -1,8 +1,4 @@
-import Button from "./Button";
-import Nav from "./Nav";
-import ShoeCard from "./ShoeCard";
-import PopularProductCard from "./PopularProductCard";
-import ServiceCard from "./ServiceCard";
-import ReviewCard from "./ReviewCard";
-
-export { Button, Nav, ShoeCard, PopularProductCard, ServiceCard, ReviewCard };
+export { default as Navbar } from './Navbar';
+export { default as Main } from './main';
+export { default as Product } from './Products';
+export { default as Footer } from './Footer';
