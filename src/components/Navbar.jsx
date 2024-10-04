@@ -1,43 +1,105 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+// css
+import "../styles/navbar.css";
+import "../styles/utils.css";
 
-const Navbar = () => {
-    const state = useSelector(state => state.handleCart)
-    return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 sticky-top">
-            <div className="container">
-                <NavLink className="navbar-brand fw-bold fs-4 px-2" to="/"> React Ecommerce</NavLink>
-                <button className="navbar-toggler mx-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+const NavClone = () => {
+  const state = useSelector((state) => state.handleCart);
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav m-auto my-2 text-center">
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/">Home </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/product">Products</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/about">About</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/contact">Contact</NavLink>
-                        </li>
-                    </ul>
-                    <div className="buttons text-center">
-                        <NavLink to="/login" className="btn btn-outline-dark m-2"><i className="fa fa-sign-in-alt mr-1"></i> Login</NavLink>
-                        <NavLink to="/register" className="btn btn-outline-dark m-2"><i className="fa fa-user-plus mr-1"></i> Register</NavLink>
-                        <NavLink to="/cart" className="btn btn-outline-dark m-2"><i className="fa fa-cart-shopping mr-1"></i> Cart ({state.length}) </NavLink>
-                    </div>
-                </div>
+  const [inputValue, setInputValue] = useState("");
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
 
+  const searchItem = () => {
+    console.log(inputValue);
+  };
 
+  return (
+    <nav className="navbar">
+      <div className="logo">Tedverse</div>
+      <div style={{ justifyContent: "center", width: "50%" }}>
+        <ul className="nav-links">
+          <li>
+            <a href="#">home</a>
+          </li>
+          <li>
+            <a href="#">offers</a>
+          </li>
+          <li>
+            <a href="#">category</a>
+          </li>
+          <li>
+            <a href="#">contact</a>
+          </li>
+        </ul>
+        {/* <div className="search-bar"> */}
+        {/* <input type="text" placeholder="Find your joy..." />
+          <div className="icons">
+            <i className="fas fa-search" />
+            <div className="cart-icon">
+              <i className="fas fa-shopping-cart" />
+              <span className="cart-count">3</span>
             </div>
-        </nav>
-    )
-}
+          </div> */}
+        <div className="input-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Find your joy..."
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+            value={inputValue}
+            onChange={handleInputChange}
+            style={{
+              outline: "none",
+              boxShadow: "none",
+            }}
+          />
+          <button
+            className="btn"
+            type="button"
+            style={{
+              outline: "none",
+              boxShadow: "none",
+              backgroundColor: "rgba(245, 62, 99, 0.5) ",
+              color: "white",
+            }}
+            onClick={searchItem}
+          >
+            <i className="fas fa-search" />
+          </button>
+          <div
+            style={{
+              backgroundColor: "rgba(245, 62, 99, 0.5)",
+              color: "crimson",
+              marginLeft: "10px",
+            }}
+          >
+            <button className="btn" type="button" style={{ color: "white" }}>
+              <i className="fas fa-shopping-cart" />
+              <span className="cart-count">3</span>
+              <span style={{ padding: "0 3px" }}>Cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* </div> */}
+      <div className="user-section">
+        <div className="user-greeting">
+          <i className="fas fa-user" />
+          <span>Welcome, Niloy</span>
+        </div>
+        <div className="join-community">join our community</div>
+        <div className="community-icons">
+          <i className="fas fa-globe" />
+          <i className="fab fa-facebook" />
+          <i className="fas fa-mobile-alt" />
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
+export default NavClone;
