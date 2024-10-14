@@ -1,0 +1,130 @@
+.nav {
+  background-color: crimson !important;
+  color: white;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #d71a34;
+  color: white;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+  width: 90%;
+}
+
+.search-field {
+  outline: none;
+  box-shadow: none;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.icons .fas {
+  font-size: 18px;
+  color: #d71a34;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: rgba(245, 62, 99, 0.5);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 12px;
+  border: 1px solid white;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.user-greeting {
+  display: flex;
+  align-items: center;
+}
+
+.user-greeting i {
+  margin-right: 5px;
+}
+
+.join-community {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.community-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.community-icons i {
+  margin-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
