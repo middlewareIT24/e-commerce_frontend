@@ -9,3 +9,16 @@
 .padding-zero {
   padding: 0;
 }
+
+.load-more-btn {
+  padding: 10px;
+  background-color: crimson;
+  width: 50%;
+  text-align: center;
+  margin: 0px auto;
+  color: white;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
