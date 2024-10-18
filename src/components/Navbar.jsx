@@ -1,3 +1,6 @@
+import Avatar from "@mui/material/Avatar";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 // css
@@ -14,6 +17,16 @@ const NavClone = () => {
 
   const searchItem = () => {
     console.log(inputValue);
+  };
+
+  const profileImage =
+    "../../../../../../Personal/MiddlewareIT/e-commerce/e-commerce_frontend/public/assets/dp.jpg"; // should implement dynamic later for each accounts
+  const defaultProfileImage =
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSB6ZH3zjn4k7qqAugR5mFcf6RC1tVNZAetQ&s";
+
+  const handleImageError = (e) => {
+    e.target.src =
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSB6ZH3zjn4k7qqAugR5mFcf6RC1tVNZAetQ&s"; // Fallback image
   };
 
   return (
@@ -80,17 +93,50 @@ const NavClone = () => {
             <button className="btn" type="button" style={{ color: "white" }}>
               <i className="fas fa-shopping-cart" />
               <span className="cart-count">3</span>
-              <span style={{ padding: "0 3px" }}>Cart</span>
+              {/* <span style={{ padding: "0 3px" }}>Cart</span> */}
+            </button>
+          </div>
+          <div
+            style={{
+              backgroundColor: "rgba(245, 62, 99, 0.5)",
+              color: "crimson",
+              marginLeft: "10px",
+            }}
+          >
+            <button className="btn" type="button" style={{ color: "white" }}>
+              <i className="fa-solid fa-heart"></i>
+              <span className="cart-count">3</span>
+              {/* <span style={{ padding: "0 3px" }}>Cart</span> */}
             </button>
           </div>
         </div>
       </div>
       {/* </div> */}
       <div className="user-section">
-        <div className="user-greeting">
-          <i className="fas fa-user" />
-          <span>Welcome, Niloy</span>
-        </div>
+        <Stack direction="row" spacing={1}>
+          <Chip
+            avatar={
+              // <Avatar
+              //   alt="Natacha"
+              //   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSB6ZH3zjn4k7qqAugR5mFcf6RC1tVNZAetQ&s"
+              // />
+              <Avatar
+                alt="Natacha"
+                src="/public/assets/dp.jpg"
+                onError={handleImageError} // Fallback when image fails to load
+              />
+            }
+            label="Welcome, Niloy"
+            variant="filled"
+            clickable
+            color="default"
+            sx={{
+              color: "white",
+              // borderColor: "white",
+              // border: "none",
+            }}
+          />
+        </Stack>
         <div className="join-community">join our community</div>
         <div className="community-icons">
           <i className="fas fa-globe" />

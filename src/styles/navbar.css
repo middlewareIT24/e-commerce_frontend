@@ -19,6 +19,11 @@
   padding: 10px 20px;
   background-color: #d71a34;
   color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures it stays on top of other content */
 }
 
 .logo {
