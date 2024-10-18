@@ -23,7 +23,7 @@ const Offers = () => {
         {images.map((element) => {
           const { id, source } = element;
           return (
-            <MDBCarouselItem key={id} itemId={id} style={{ height: "400px" }}>
+            <MDBCarouselItem key={id} itemId={id} style={{ height: "450px" }}>
               <img
                 src={source}
                 className="d-block w-100"
