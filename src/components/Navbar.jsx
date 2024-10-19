@@ -90,7 +90,11 @@ const NavClone = () => {
               marginLeft: "10px",
             }}
           >
-            <button className="btn" type="button" style={{ color: "white" }}>
+            <button
+              className="btn"
+              type="button"
+              style={{ color: "white", outline: "none", boxShadow: "none" }}
+            >
               <i className="fas fa-shopping-cart" />
               <span className="cart-count">3</span>
               {/* <span style={{ padding: "0 3px" }}>Cart</span> */}
@@ -103,7 +107,11 @@ const NavClone = () => {
               marginLeft: "10px",
             }}
           >
-            <button className="btn" type="button" style={{ color: "white" }}>
+            <button
+              className="btn"
+              type="button"
+              style={{ color: "white", outline: "none", boxShadow: "none" }}
+            >
               <i className="fa-solid fa-heart"></i>
               <span className="cart-count">3</span>
               {/* <span style={{ padding: "0 3px" }}>Cart</span> */}
