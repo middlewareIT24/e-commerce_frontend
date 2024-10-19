@@ -35,7 +35,7 @@ const NavClone = () => {
       <div style={{ justifyContent: "center", width: "50%" }}>
         <ul className="nav-links">
           <li>
-            <a href="#">home</a>
+            <a href="/">home</a>
           </li>
           <li>
             <a href="#">offers</a>
@@ -44,7 +44,7 @@ const NavClone = () => {
             <a href="#">category</a>
           </li>
           <li>
-            <a href="#">contact</a>
+            <a href="contact">contact</a>
           </li>
         </ul>
         {/* <div className="search-bar"> */}
