@@ -17,13 +17,20 @@
   text-align: center;
   margin: 0px auto;
   color: white;
+  border: 1px solid crimson;
+}
+
+.load-more-btn:hover {
+  color: crimson;
+  background-color: white;
+  border: 1px solid crimson;
 }
 
 .cursor-pointer {
   cursor: pointer;
 }
 
-.indexing {
+.indenting {
   padding: 0 1rem;
 }
 
@@ -54,4 +61,9 @@
 
 .text-align-start {
   text-align: start;
+}
+
+.product-page-indenting {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }

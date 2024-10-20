@@ -10,7 +10,7 @@ const ContactPage = () => {
       <div className="full-height">
         <Navbar />
 
-        <div className="page-content contact-container indexing">
+        <div className="page-content contact-container indenting">
           {/* Contact Info Section */}
           <div className="contact-info">
             <div className="contact-details">
