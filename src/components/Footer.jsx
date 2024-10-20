@@ -1,19 +1,14 @@
 import React from "react";
+import { Copyright } from "../components";
+import { AboutPage } from "../pages";
 // styles
 import "../styles/footer.css";
 
 const Footer = () => {
   return (
     <>
-      <footer>
-        <span>
-          Created By{" "}
-          <a href="https://www.linkedin.com/company/middleware-it/?viewAsMember=true">
-            Middleware IT
-          </a>{" "}
-          | <span className="far fa-copyright"></span> 2024 All rights reserved.
-        </span>
-      </footer>
+      <AboutPage />
+      <Copyright />
     </>
   );
 };
