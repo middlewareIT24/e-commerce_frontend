@@ -43,3 +43,15 @@
   outline: none;
   box-shadow: none;
 }
+
+.align-item-center {
+  align-items: center;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-start {
+  text-align: start;
+}

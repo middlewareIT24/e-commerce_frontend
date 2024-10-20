@@ -1,3 +1,4 @@
+export { default as Copyright } from "./Copywrite";
 export { default as Footer } from "./Footer";
 export { default as LoadProductButton } from "./LoadProductsButton";
 export { default as Navbar } from "./Navbar";
