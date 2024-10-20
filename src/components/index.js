@@ -1,6 +1,7 @@
 export { default as AllProductsPage } from "./AllProducts";
 export { default as Copyright } from "./Copywrite";
 export { default as Footer } from "./Footer";
+export { default as HomeHeader } from "./HomeHeader";
 export { default as LoadProductButton } from "./LoadProductsButton";
 export { default as Navbar } from "./Navbar";
 export { default as Offers } from "./Offers";

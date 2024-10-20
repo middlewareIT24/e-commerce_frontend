@@ -1,11 +1,11 @@
-import { Footer, Main, Navbar, ProductsPage } from "../components";
+import { Footer, HomeHeader, Main, Navbar, ProductsPage } from "../components";
 
 function Home() {
   return (
     <>
+      <HomeHeader />
       <Navbar />
       <Main />
-      {/* <Product /> */}
       <ProductsPage />
       <Footer />
     </>
