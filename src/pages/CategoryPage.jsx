@@ -61,7 +61,7 @@ export default function CategoryPage() {
           scrollBehavior: "smooth",
           flexWrap: "nowrap",
         }}
-        className="cursor-pointer indexing"
+        className="cursor-pointer indenting"
       >
         {categoryList.map((element, index) => {
           return (
