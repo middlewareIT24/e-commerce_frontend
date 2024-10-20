@@ -1,6 +1,3 @@
-import Avatar from "@mui/material/Avatar";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 // css
@@ -33,29 +30,6 @@ const NavClone = () => {
     <nav className="navbar">
       <div className="logo">Tedverse</div>
       <div style={{ justifyContent: "center", width: "50%" }}>
-        <ul className="nav-links">
-          <li>
-            <a href="/">home</a>
-          </li>
-          <li>
-            <a href="#">offers</a>
-          </li>
-          <li>
-            <a href="#">category</a>
-          </li>
-          <li>
-            <a href="contact">contact</a>
-          </li>
-        </ul>
-        {/* <div className="search-bar"> */}
-        {/* <input type="text" placeholder="Find your joy..." />
-          <div className="icons">
-            <i className="fas fa-search" />
-            <div className="cart-icon">
-              <i className="fas fa-shopping-cart" />
-              <span className="cart-count">3</span>
-            </div>
-          </div> */}
         <div className="input-group">
           <input
             type="text"
@@ -97,7 +71,6 @@ const NavClone = () => {
             >
               <i className="fas fa-shopping-cart" />
               <span className="cart-count">3</span>
-              {/* <span style={{ padding: "0 3px" }}>Cart</span> */}
             </button>
           </div>
           <div
@@ -114,37 +87,11 @@ const NavClone = () => {
             >
               <i className="fa-solid fa-heart"></i>
               <span className="cart-count">3</span>
-              {/* <span style={{ padding: "0 3px" }}>Cart</span> */}
             </button>
           </div>
         </div>
       </div>
-      {/* </div> */}
       <div className="user-section">
-        <Stack direction="row" spacing={1}>
-          <Chip
-            avatar={
-              // <Avatar
-              //   alt="Natacha"
-              //   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSB6ZH3zjn4k7qqAugR5mFcf6RC1tVNZAetQ&s"
-              // />
-              <Avatar
-                alt="Natacha"
-                src="/public/assets/dp.jpg"
-                onError={handleImageError} // Fallback when image fails to load
-              />
-            }
-            label="Welcome, Niloy"
-            variant="filled"
-            clickable
-            color="default"
-            sx={{
-              color: "white",
-              // borderColor: "white",
-              // border: "none",
-            }}
-          />
-        </Stack>
         <div className="join-community">join our community</div>
         <div className="community-icons">
           <i className="fas fa-globe" />
