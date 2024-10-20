@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <>
       <footer className="footer">
-        <div className="footer-container indexing">
+        <div className="footer-container indenting">
           {/* Logo and Social Icons */}
           <div className="footer-left">
             <div className="logo">
