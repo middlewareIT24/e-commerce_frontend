@@ -1,67 +1,72 @@
-import React from 'react'
-import { Footer, Navbar } from "../components";
+import React from "react";
+// styles
+import "../styles/about.css";
+import "../styles/utils.css";
+
 const AboutPage = () => {
   return (
     <>
-      <Navbar />
-      <div className="container my-3 py-3">
-        <h1 className="text-center">About Us</h1>
-        <hr />
-        <p className="lead text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          facere doloremque veritatis odit similique sequi. Odit amet fuga nam
-          quam quasi facilis sed doloremque saepe sint perspiciatis explicabo
-          totam vero quas provident ipsam, veritatis nostrum velit quos
-          recusandae est mollitia esse fugit dolore laudantium. Ex vel explicabo
-          earum unde eligendi autem praesentium, doloremque distinctio nesciunt
-          porro tempore quis eaque labore voluptatibus ea necessitatibus
-          exercitationem tempora molestias. Ad consequuntur veniam sequi ullam
-          tempore vel tenetur soluta dolore sunt maxime aliquam corporis est,
-          quo saepe dolorem optio minus sint nemo totam dolorum! Reprehenderit
-          delectus expedita a alias nam recusandae illo debitis repellat libero,
-          quasi explicabo molestiae saepe, dolorem tempore itaque eveniet quam
-          dignissimos blanditiis excepturi harum numquam vel nihil? Ipsum
-        </p>
+      <footer className="footer">
+        <div className="footer-container indexing">
+          {/* Logo and Social Icons */}
+          <div className="footer-left">
+            <div className="logo">
+              <h1>TEDVERSE</h1>
+            </div>
+            <div className="social-icons">
+              <a href="#">
+                <i className="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-youtube"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i className="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
 
-        <h2 className="text-center py-4">Our Products</h2>
-        <div className="row">
-          <div className="col-md-3 col-sm-6 mb-3 px-3">
-            <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
-              <div className="card-body">
-                <h5 className="card-title text-center">Mens's Clothing</h5>
-              </div>
-            </div>
+          {/* About Section */}
+          <div className="footer-links text-align-start">
+            <h3>About</h3>
+            <ul className="margin-zero padding-zero">
+              <li>
+                <a href="#">About Us</a>
+              </li>
+              <li>
+                <a href="#">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Return and Refund Policy</a>
+              </li>
+              <li>
+                <a href="#">Be a Partner</a>
+              </li>
+            </ul>
           </div>
-          <div className="col-md-3 col-sm-6 mb-3 px-3">
-            <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
-              <div className="card-body">
-                <h5 className="card-title text-center">Women's Clothing</h5>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 mb-3 px-3">
-            <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
-              <div className="card-body">
-                <h5 className="card-title text-center">Jewelery</h5>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 mb-3 px-3">
-            <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
-              <div className="card-body">
-                <h5 className="card-title text-center">Electronics</h5>
-              </div>
-            </div>
+
+          {/* Help Section */}
+          <div className="footer-links text-align-start">
+            <h3>Help</h3>
+            <ul className="margin-zero padding-zero">
+              <li>
+                <a href="#">FAQ</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      <Footer />
+      </footer>
     </>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
