@@ -37,7 +37,7 @@ const HomeHeader = () => {
         </ul>
       </div>
 
-      <Stack direction="row" spacing={1}>
+      <Stack direction="row" spacing={1} pt={0.63}>
         <Chip
           avatar={
             // <Avatar
