@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { HomeHeader } from "../components";
+// import { useNavigate } from "react-router-dom";
 // css
 import "../styles/navbar.css";
 import "../styles/utils.css";
@@ -27,79 +29,83 @@ const NavClone = () => {
   };
 
   return (
-    <nav className="navbar">
-      <div className="logo">Tedverse</div>
-      <div style={{ justifyContent: "center", width: "50%" }}>
-        <div className="input-group">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Find your joy..."
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-            value={inputValue}
-            onChange={handleInputChange}
-            style={{
-              outline: "none",
-              boxShadow: "none",
-            }}
-          />
-          <button
-            className="btn"
-            type="button"
-            style={{
-              outline: "none",
-              boxShadow: "none",
-              backgroundColor: "rgba(245, 62, 99, 0.5) ",
-              color: "white",
-            }}
-            onClick={searchItem}
-          >
-            <i className="fas fa-search" />
-          </button>
-          <div
-            style={{
-              backgroundColor: "rgba(245, 62, 99, 0.5)",
-              color: "crimson",
-              marginLeft: "10px",
-            }}
-          >
+    <>
+      <HomeHeader />
+
+      <nav className="navbar">
+        <div className="logo cursor-pointer">Tedverse</div>
+        <div style={{ justifyContent: "center", width: "50%" }}>
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Find your joy..."
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+              value={inputValue}
+              onChange={handleInputChange}
+              style={{
+                outline: "none",
+                boxShadow: "none",
+              }}
+            />
             <button
               className="btn"
               type="button"
-              style={{ color: "white", outline: "none", boxShadow: "none" }}
+              style={{
+                outline: "none",
+                boxShadow: "none",
+                backgroundColor: "rgba(245, 62, 99, 0.5) ",
+                color: "white",
+              }}
+              onClick={searchItem}
             >
-              <i className="fas fa-shopping-cart" />
-              <span className="cart-count">3</span>
+              <i className="fas fa-search" />
             </button>
-          </div>
-          <div
-            style={{
-              backgroundColor: "rgba(245, 62, 99, 0.5)",
-              color: "crimson",
-              marginLeft: "10px",
-            }}
-          >
-            <button
-              className="btn"
-              type="button"
-              style={{ color: "white", outline: "none", boxShadow: "none" }}
+            <div
+              style={{
+                backgroundColor: "rgba(245, 62, 99, 0.5)",
+                color: "crimson",
+                marginLeft: "10px",
+              }}
             >
-              <i className="fa-solid fa-heart"></i>
-              <span className="cart-count">3</span>
-            </button>
+              <button
+                className="btn"
+                type="button"
+                style={{ color: "white", outline: "none", boxShadow: "none" }}
+              >
+                <i className="fas fa-shopping-cart" />
+                <span className="cart-count">3</span>
+              </button>
+            </div>
+            <div
+              style={{
+                backgroundColor: "rgba(245, 62, 99, 0.5)",
+                color: "crimson",
+                marginLeft: "10px",
+              }}
+            >
+              <button
+                className="btn"
+                type="button"
+                style={{ color: "white", outline: "none", boxShadow: "none" }}
+              >
+                <i className="fa-solid fa-heart"></i>
+                <span className="cart-count">3</span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="user-section">
-        <div className="join-community">join our community</div>
-        <div className="community-icons">
-          <i className="fas fa-globe" />
-          <i className="fab fa-facebook" />
-          <i className="fas fa-mobile-alt" />
+        <div className="user-section">
+          <div className="join-community">join our community</div>
+          <div className="community-icons">
+            <i className="fas fa-globe" />
+            <i className="fab fa-facebook" />
+            <i className="fas fa-mobile-alt" />
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 
