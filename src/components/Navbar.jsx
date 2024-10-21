@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { HomeHeader } from "../components";
+import { useNavigateTo } from "../hooks/doNavigation";
 // import { useNavigate } from "react-router-dom";
 // css
 import "../styles/navbar.css";
@@ -8,6 +9,11 @@ import "../styles/utils.css";
 
 const NavClone = () => {
   const state = useSelector((state) => state.handleCart);
+  const navigateTo = useNavigateTo();
+
+  const onNavigation = () => {
+    navigateTo("/");
+  };
 
   const [inputValue, setInputValue] = useState("");
   const handleInputChange = (e) => {
@@ -33,7 +39,9 @@ const NavClone = () => {
       <HomeHeader />
 
       <nav className="navbar">
-        <div className="logo cursor-pointer">Tedverse</div>
+        <div className="logo cursor-pointer" onClick={onNavigation}>
+          Tedverse
+        </div>
         <div style={{ justifyContent: "center", width: "50%" }}>
           <div className="input-group">
             <input

@@ -1,13 +1,10 @@
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { LoadProductButton, ProductCard } from "../components";
 // styles
 import "../styles/utils.css";
 
 function AllProductsPage() {
-  const navigate = useNavigate();
-
   const productList = [
     {
       url: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/E-commerce/Products/4.webp",
@@ -242,7 +239,6 @@ function AllProductsPage() {
       setPagination(12); // Reset to showing 4 products
       setButtonText("LOAD MORE..."); // Update button to "LOAD MORE..."
     }
-    // navigate("/product");
   };
 
   return (

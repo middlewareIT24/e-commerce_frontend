@@ -1,10 +1,10 @@
 import { MDBCol, MDBContainer, MDBRow } from "mdb-react-ui-kit";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { LoadProductButton, PageTitle, ProductCard } from ".";
+import { useNavigateTo } from "../hooks/doNavigation";
 
 function ProductsPage() {
-  const navigate = useNavigate();
+  const navigateTo = useNavigateTo();
 
   const productList = [
     {
@@ -133,7 +133,8 @@ function ProductsPage() {
   const buttonText = "LOAD All...";
 
   const loadAll = () => {
-    navigate("/product");
+    console.log("yes");
+    navigateTo("/product");
   };
 
   return (
